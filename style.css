@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:IRANYekan;
+}
+
+@font-face {
+    font-family: "IRANYekan";
+    font-style: normal;
+    font-weight: 300;
+    src: url("fonts/IRANYekanXFaNum-Light.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "IRANYekan";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/IRANYekanXFaNum-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "IRANYekan";
+    font-style: normal;
+    font-weight: 500;
+    src: url("fonts/IRANYekanXFaNum-Medium.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "IRANYekan";
+    font-style: normal;
+    font-weight: 600;
+    src: url("fonts/IRANYekanXFaNum-DemiBold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "IRANYekan";
+    font-style: normal;
+    font-weight: bold;
+    src: url("fonts/IRANYekanXFaNum-Bold.woff2") format("woff2");
+  }
+.main-logo{
+    width: 10%;
+    position: absolute;
+    left: 1.2rem;
+    top: 5rem;
+    animation: logo 10S linear  infinite;
+} 
+@keyframes logo {
+    0%{
+        filter: blur(0px);
+        transform: rotatey(0deg);
+    }
+    25%{
+        filter:brightness(70%);
+    }
+    50%{
+        filter: contrast(80%);
+    }
+    75%{
+        filter: grayscale(100%);
+    }
+    100%{
+        filter: saturate(4);
+        transform: rotateY(360deg);
+    }     
+}
+p{
+    line-height: 2rem;
+    font-family:"Vazir";
+    font-size: 18px;
+}
+h2{
+    font-size: 16px;
+    padding:2rem;
+}
+#mainpage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#f-pageH2{
+    padding: 1rem;
+    margin-top:1rem;
+}
+#f-pageP{
+    width:100%;
+    padding:1rem;
+}
+.main-header{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   background-color:#0a1a3d;
+}
+.h1-home{
+    color:#fff;
+    padding:1rem;
+    font-size:2rem;
+}
+.main-header ul {
+    list-style: none;
+    display: flex;
+}
+.main-header ul li a{
+    text-decoration: none;
+    margin-right: 2rem;
+    color: #fff;
+    padding: 0.5rem;
+}
+header nav ul li a:hover{
+    background-color: #fff;
+    border-radius: 0.5rem;
+    color: #0a1a3c;
+    
+}
+.search{
+    border-radius: 0 10px 0 10px;
+    background-color: #0a1a3c;
+    border: 1px solid #fff;
+    background-image: url("./img/er.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 215px;
+    box-sizing: border-box;
+    transition: width 2s linear, background-color 2s linear ;
+}
+input[type=search]{
+    padding: 15px 20px 15px 50px;
+    box-sizing: border-box;
+}
+.search:focus{
+    width: 300px;
+    background-color: #fff;
+}
+.search::placeholder{
+    font-size: 20px;
+    color: darkgray;
+    text-shadow: 2px 2px 10px black;
+}
+.img-photos{
+    width: 100%;
+    height: 400px;
+    background-image: url(./img/15316783_766.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: slider 30s linear infinite;
+}
+@keyframes slider{
+    0%{
+        background-image: url(./img/1674912435686.JPG);
+        background-size: 100% 100%;
+    }
+    25%{
+        background-image: url(./img/cropped.png);
+        background-size: 100% 100%;
+    }
+    50%{
+        background-image: url(./img/20211019_082321.jpg );
+        background-size: 100% 100%;
+    }
+    75%{
+        background-image: url(./img/cropped.jpg);
+        background-size: 100% 100%;
+    }
+    100%{
+        background-image: url(./img/IMG_20230219_193136_398.jpg);
+        background-size: 100% 100%;
+    }
+}
+body{
+    background-color: rgb(244 245 246 / var(--tw-bg-opacity, 1));
+    width: 100%;
+}
+/* موبایل - کمتر از 600px */
+@media (max-width: 600px) {
+    body {
+      width: 100%;
+    }
+  
+    .main-logo {
+      width: 25%;
+      top: 2rem;
+    }
+  
+    .main-header,
+    .main-header ul,
+    .footer-div {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .search,
+    .main-p,
+    form,
+    .card-continer,
+    .More-info,
+    .all-div-Gallery {
+      width: 90%;
+      margin: auto;
+    }
+  
+    .div1-g,
+    .Afg,
+    .lastpart-aside {
+      grid-template-columns: 1fr;
+    }
+  
+    .city-day-div {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .kabul, .culturelist, .kabul-photo {
+      width: 100%;
+    }
+  }
+  
+  /* تبلت - بین 601px تا 1024px */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .main-logo {
+      width: 15%;
+    }
+  
+    .div1-g,
+    .Afg,
+    .lastpart-aside {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  
+    form {
+      width: 60%;
+      margin: auto;
+    }
+  
+    .main-p {
+      width: 80%;
+      margin: auto;
+    }
+  
+    .city-day-div {
+      flex-direction: column;
+    }
+  
+    .footer-div {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .More-info {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  
+  /* دسکتاپ - بزرگتر از 1024px */
+  @media (min-width: 1025px) {
+    .div1-g {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .lastpart-aside {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    form {
+      width: 30%;
+      margin-right: 25rem;
+    }
+  
+    .Afg {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+/*Gallery Section*/
+.Gallery{
+    padding: 2rem 0;  
+    text-align: center;
+}
+
+.div1-g{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.all-div-Gallery{
+    width:200px;
+    height:20rem;
+    color: #000;
+    background-color: #faf7f5;
+    border: solid 1px rgb(0,0,0, 0.1); 
+    margin-right: 2rem;
+}
+.all-div-Gallery:hover{
+    box-shadow: 0px 0px 4px 1px #828282;
+}
+.h2-Gallery{
+    font-size:20px;
+}
+.para-Gallery,.h2-Gallery{
+    padding: 0.5rem 1rem;
+}
+.img-Galley{
+    width:100%;
+    height:50%;
+}
+/*Form*/
+.form-section{
+    background-image:url(./img/afghanistan-herat-national-museum-b89x5pvee1u5rghs.jpg);
+    padding:4rem;
+}
+label{
+    font-size:1rem;
+}
+form{
+   margin-right:25rem;
+   width: 30%;
+   background-color:rgb(10, 26, 60 , 0.5);
+   padding: 2rem;
+}
+.form-div{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+.inputs{
+    height:2rem;
+}
+.btn-footer{
+    padding: 0.5rem 0;
+    font-size:18px;
+}
+/*City of day*/
+.city-day-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: right;
+    align-items: center;
+    margin: 1rem 0.1rem;
+    background-color: #fff; 
+    font-size: 18px;  
+}
+.city-day{
+    text-align: center;
+    width: 100%;
+}
+.kabul{
+    width: 15%;
+    height: auto;
+    background-color: #0a1a3c;
+    color: #fff;
+    padding:1rem;
+}
+.culturelist{
+    width:55%;
+}
+.culturelist ul li{
+    list-style:none;
+    padding:0.5rem;
+    font-size: 16px;
+}
+.kabul-photo{
+   place-items:center;
+   width:80%;
+   margin-right:9%;
+}
+.kabul-photo img{
+    width:17rem;
+    height:80%;
+    margin:1rem 1rem;
+}
+.Afg{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: center;
+}
+.Afg img:hover{
+    box-shadow: 0 0 4px 1px #828282;
+    
+}
+
+/*Footer*/
+.page-footer{
+    background-color:#0a1a3c;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    width: 100%;
+       
+}
+.footer-div{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #0c2251;
+    margin: 0.5rem 2rem;
+    padding:0 1rem;
+    line-height: 2rem;
+}
+.f-d{
+    border-left:solid 0.2rem #828282 ;
+    padding-left: 8rem;
+}
+.social-icons{
+    font-size: 1rem;
+}
+.sicial{
+    font-size:15px;
+    padding: 0 1rem;
+}
+.page-footer a{
+    text-decoration: none;
+    color: #fff;
+    font-size:12px;
+}
+.page-footer a:hover{
+    color: #828282;
+    font-size: 15px;
+}
+.Ehbal-lahori{
+    font-size: 18px;
+    text-align: center;
+    padding: 1rem 0;
+}
+.last-para{
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 15px;
+
+}
+.More-info{
+    width: 80%;
+    background-color: #faf7f5;
+    margin:2rem 7rem;
+    padding: 1rem;
+}
+.More-info h2{
+    margin-top: 2rem;
+    font-size: 20px;
+}
+.lastpart-aside{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items:center;
+    margin-bottom: 2rem;
+}
+.card-continer{
+    background-color: #faf7f5;
+    box-shadow: 0 0 3px 1px #828282;
+    height: 320px;
+    width: 250px;
+    margin-top: 2rem;
+}
+.img1{
+    width: 100%;
+}
+.p-card{
+    background-color: #0a1a3c;
+    margin: 0.5rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+.p-card p a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+.p-card a:hover{
+    text-decoration: underline;
+}
