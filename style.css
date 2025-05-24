@@ -174,7 +174,9 @@ body{
     background-color: rgb(244 245 246 / var(--tw-bg-opacity, 1));
     width: 100%;
 }
-
+h3{
+    padding:1rem;
+}
 /*Gallery Section*/
 .Gallery{
     padding: 2rem 0;  
